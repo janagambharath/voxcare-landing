@@ -165,7 +165,11 @@ nav {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #2b0d52 0%, #7b3fe3 100%);
+  background: 
+    linear-gradient(135deg, rgba(43, 13, 82, 0.85) 0%, rgba(123, 63, 227, 0.85) 100%),
+    url('../assets/pattern-hero.png') center center;
+  background-size: cover;
+  background-attachment: fixed;
   overflow: hidden;
   padding-top: 80px;
 }
@@ -179,8 +183,8 @@ nav {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(ellipse at 20% 50%, rgba(106, 211, 201, 0.2) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 70%, rgba(123, 63, 227, 0.2) 0%, transparent 60%);
+    radial-gradient(ellipse at 20% 50%, rgba(106, 211, 201, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(123, 63, 227, 0.15) 0%, transparent 60%);
   animation: wave-flow 50s ease-in-out infinite;
   pointer-events: none;
   z-index: 1;
