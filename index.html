@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   
   <!-- Styles -->
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./styles.css">
   
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -371,7 +371,13 @@
       </div>
       
       <div class="modal-body">
-        <form id="demo-form" novalidate>
+        <form id="demo-form" action="https://formsubmit.co/janagambharath1107@gmail.com" method="POST">
+          <!-- FormSubmit Configuration -->
+          <input type="hidden" name="_subject" value="VoxCare AI - New Demo Request">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+          
           <div class="form-group">
             <label for="demo-name">Name <span aria-label="required">*</span></label>
             <input type="text" id="demo-name" name="name" required aria-required="true">
@@ -404,8 +410,13 @@
         </form>
         
         <div class="form-success">
-          <p><strong>Thank you for your interest!</strong></p>
-          <p>We'll follow up via email/WhatsApp to schedule your live demo. If you prefer, contact us directly: <a href="mailto:janagambharath1107@gmail.com">janagambharath1107@gmail.com</a></p>
+          <p><strong>✓ Thank you for your interest!</strong></p>
+          <p>Your demo request has been received. We'll reach out shortly via email or WhatsApp.</p>
+          <p style="margin-top: 1.5rem;"><strong>Want to connect faster?</strong></p>
+          <p>
+            📧 Email: <a href="mailto:janagambharath1107@gmail.com">janagambharath1107@gmail.com</a><br>
+            💬 WhatsApp: <a href="https://wa.me/917995854994" target="_blank" rel="noopener noreferrer">+91 7995 854 994</a>
+          </p>
         </div>
       </div>
     </div>
@@ -417,6 +428,6 @@
   </div>
   
   <!-- Scripts -->
-  <script src="./js/main.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
