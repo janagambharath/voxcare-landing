@@ -165,8 +165,7 @@ nav {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, rgba(43, 13, 82, 0.95), rgba(123, 63, 227, 0.85)), 
-              url('../assets/pattern-hero.jpg') center/cover;
+  background: linear-gradient(135deg, #2b0d52 0%, #7b3fe3 100%);
   overflow: hidden;
   padding-top: 80px;
 }
@@ -180,9 +179,9 @@ nav {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(ellipse at 20% 50%, rgba(106, 211, 201, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 70%, rgba(123, 63, 227, 0.15) 0%, transparent 50%);
-  animation: wave-flow 60s ease-in-out infinite;
+    radial-gradient(ellipse at 20% 50%, rgba(106, 211, 201, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(123, 63, 227, 0.2) 0%, transparent 60%);
+  animation: wave-flow 50s ease-in-out infinite;
   pointer-events: none;
   z-index: 1;
 }
@@ -190,15 +189,19 @@ nav {
 @keyframes wave-flow {
   0%, 100% {
     transform: translate(0, 0) scale(1);
-    opacity: 0.6;
+    opacity: 0.7;
   }
-  33% {
-    transform: translate(-3%, 2%) scale(1.05);
+  25% {
+    transform: translate(-5%, 3%) scale(1.08);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(5%, -3%) scale(0.92);
     opacity: 0.8;
   }
-  66% {
-    transform: translate(3%, -2%) scale(0.95);
-    opacity: 0.7;
+  75% {
+    transform: translate(-3%, 4%) scale(1.05);
+    opacity: 0.85;
   }
 }
 
@@ -969,6 +972,19 @@ footer {
 
 .form-success.active {
   display: block;
+}
+
+.form-success a {
+  color: var(--color-violet);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+.form-success a:hover,
+.form-success a:focus {
+  color: var(--color-navy);
+  text-decoration: underline;
 }
 
 /* ==================== Demo Badge ==================== */
