@@ -123,6 +123,19 @@ nav {
 
 /* Mobile Nav */
 @media (max-width: 768px) {
+  nav {
+    padding: 0.875rem 1rem;
+  }
+  
+  .nav-brand {
+    font-size: 1rem;
+  }
+  
+  .nav-brand img {
+    width: 36px;
+    height: 36px;
+  }
+  
   .nav-toggle {
     display: block;
   }
@@ -321,6 +334,7 @@ nav {
   cursor: pointer;
   font-size: 1rem;
   font-family: var(--font-family);
+  text-align: center;
 }
 
 .btn-primary {
@@ -1021,41 +1035,308 @@ footer {
 
 /* ==================== Responsive Adjustments ==================== */
 @media (max-width: 768px) {
+  /* Hero Section Mobile Optimizations */
+  .hero {
+    min-height: auto;
+    padding-top: 70px;
+    padding-bottom: 2rem;
+    background-attachment: scroll;
+  }
+  
+  .hero-container {
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+  }
+  
+  .hero-content {
+    padding: 1.75rem 1.5rem;
+    border-radius: 16px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .hero-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1.25rem;
+  }
+  
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-tagline {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.3px;
   }
   
   .hero-subtitle {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
   }
   
-  .section-header h2 {
-    font-size: 1.875rem;
+  .hero-for {
+    font-size: 0.9375rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .hero-bullets {
+    margin-bottom: 1.75rem;
+  }
+  
+  .hero-bullets li {
+    padding: 0.625rem 0;
+    padding-left: 1.875rem;
+    font-size: 0.9375rem;
+  }
+  
+  .hero-bullets li::before {
+    font-size: 1.125rem;
+    top: 0.625rem;
+  }
+  
+  .hero-ctas {
+    gap: 0.875rem;
+    flex-direction: column;
+  }
+  
+  .hero-ctas .btn {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9375rem;
   }
   
   .hero-visual {
-    padding: 1rem;
+    padding: 0.75rem 0;
   }
   
   .video-container {
     padding: 1rem;
+    border-radius: 16px;
   }
   
-  .demo-badge {
-    bottom: 1rem;
-    right: 1rem;
+  .video-container iframe {
+    border-radius: 10px;
   }
   
-  .demo-badge button {
-    padding: 0.875rem 1.25rem;
-    font-size: 0.95rem;
+  .video-caption {
+    font-size: 0.8125rem;
+    margin-top: 0.875rem;
   }
   
+  /* Sections Mobile Optimizations */
+  section {
+    padding: 3.5rem 1rem;
+  }
+  
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.875rem;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+  }
+  
+  /* Compliance Banner Mobile */
   .compliance-banner {
     padding: 1.5rem 1rem;
   }
   
+  .compliance-content {
+    gap: 1rem;
+  }
+  
+  .compliance-icon {
+    font-size: 1.75rem;
+  }
+  
   .compliance-text {
+    font-size: 0.9375rem;
+  }
+  
+  /* Features Grid Mobile */
+  .features-grid {
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 1.75rem 1.5rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.9375rem;
+  }
+  
+  /* Trust Grid Mobile */
+  .trust-grid {
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  
+  .trust-card {
+    padding: 1.5rem;
+  }
+  
+  .trust-value {
+    font-size: 1.5rem;
+  }
+  
+  .trust-subtitle {
+    font-size: 0.875rem;
+  }
+  
+  /* Tech Grid Mobile */
+  .tech-grid {
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+  
+  .tech-item {
+    padding: 1.25rem;
+  }
+  
+  /* Steps Grid Mobile */
+  .steps-grid {
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+  
+  .step h3 {
+    font-size: 1.25rem;
+  }
+  
+  .step p {
+    font-size: 0.9375rem;
+  }
+  
+  /* Integrations Mobile */
+  .integrations-grid {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .integration-item {
+    padding: 1.25rem 1.5rem;
+    font-size: 0.9375rem;
+  }
+  
+  /* FAQ Mobile */
+  .faq-item {
+    padding: 1.25rem 0;
+  }
+  
+  .faq-question {
     font-size: 1rem;
+  }
+  
+  .faq-answer {
+    font-size: 0.9375rem;
+  }
+  
+  /* Footer Mobile */
+  footer {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+  
+  .footer-grid {
+    gap: 2rem;
+  }
+  
+  .footer-brand h3 {
+    font-size: 1.125rem;
+  }
+  
+  .footer-brand p {
+    font-size: 0.875rem;
+  }
+  
+  .security-badge {
+    font-size: 0.8125rem;
+    padding: 0.5rem 0.875rem;
+  }
+  
+  /* Modal Mobile */
+  .modal-overlay {
+    padding: 0.75rem;
+  }
+  
+  .modal {
+    border-radius: 12px;
+  }
+  
+  .modal-header {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.5rem;
+    padding-right: 2rem;
+  }
+  
+  .modal-close {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+  
+  .modal-body {
+    padding: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9375rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6875rem;
+    font-size: 0.9375rem;
+  }
+  
+  /* Demo Badge Mobile */
+  .demo-badge {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+  
+  .demo-badge button {
+    padding: 0.875rem 1.375rem;
+    font-size: 0.9375rem;
+    border-radius: 40px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 375px) {
+  .hero h1 {
+    font-size: 1.625rem;
+  }
+  
+  .hero-content {
+    padding: 1.5rem 1.25rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .compliance-text {
+    font-size: 0.875rem;
   }
 }
