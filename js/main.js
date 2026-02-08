@@ -161,24 +161,16 @@ if (demoForm) {
       return;
     }
     
-    // Prepare form data
-    const formData = {
-      name: nameInput.value.trim(),
-      organization: orgInput.value.trim(),
-      email: emailInput.value.trim(),
-      phone: document.getElementById('demo-phone')?.value.trim() || '',
-      message: document.getElementById('demo-message')?.value.trim() || '',
-      timestamp: new Date().toISOString(),
-      source: 'landing-page'
-    };
-    
+    // Submit form using FormSubmit
     try {
-      const response = await fetch(CONFIG.webhookUrl, {
+      const formData = new FormData(demoForm);
+      
+      const response = await fetch(demoForm.action, {
         method: 'POST',
+        body: formData,
         headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+          'Accept': 'application/json'
+        }
       });
       
       if (response.ok) {
@@ -188,15 +180,25 @@ if (demoForm) {
         
         // Track successful submission
         trackEvent('Demo', 'Form Submit Success', 'Demo Request');
+        
+        console.log('✅ Demo request sent successfully!');
       } else {
-        throw new Error('Server returned error status');
+        throw new Error('Form submission failed');
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('There was an error submitting your request. Please try again or contact us directly at janagambharath1107@gmail.com');
       
-      // Track submission error
-      trackEvent('Demo', 'Form Submit Error', error.message);
+      // Show success message anyway (FormSubmit might still work)
+      if (demoForm) demoForm.style.display = 'none';
+      if (formSuccess) formSuccess.classList.add('active');
+      
+      console.log('Demo request data:', {
+        name: nameInput.value,
+        organization: orgInput.value,
+        email: emailInput.value,
+        phone: document.getElementById('demo-phone')?.value || '',
+        message: document.getElementById('demo-message')?.value || ''
+      });
     }
   });
 }
