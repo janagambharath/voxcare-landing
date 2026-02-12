@@ -590,6 +590,28 @@ section {
   opacity: 0.7;
 }
 
+/* ==================== About Section ==================== */
+.about-section {
+  background: var(--white);
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
 /* ==================== Tech Stack Section ==================== */
 .tech-stack {
   background: var(--bg-muted);
@@ -1215,6 +1237,13 @@ footer {
     font-size: 0.875rem;
   }
   
+  /* About Section Mobile */
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+  
   /* Tech Grid Mobile */
   .tech-grid {
     gap: 1.25rem;
@@ -1355,5 +1384,9 @@ footer {
   
   .compliance-text {
     font-size: 0.875rem;
+  }
+  
+  .about-content p {
+    font-size: 0.9375rem;
   }
 }
