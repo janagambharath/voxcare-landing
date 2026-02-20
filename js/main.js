@@ -4,10 +4,8 @@ const CONFIG = {
   // Do NOT commit API keys or webhook secrets to source control
   webhookUrl: 'https://hooks.example.com/demo',
   
-  // Analytics configuration
   analytics: {
     enabled: false, // Set to true when analytics is configured
-    // Add your analytics provider configuration here
   }
 };
 
@@ -22,7 +20,6 @@ if (navToggle && navLinks) {
     navToggle.setAttribute('aria-expanded', isActive);
   });
   
-  // Close mobile menu when clicking a link
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('active');
@@ -42,13 +39,11 @@ faqItems.forEach(item => {
     question.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
       
-      // Close all other items
       faqItems.forEach(otherItem => {
         otherItem.classList.remove('active');
         otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
       });
       
-      // Toggle current item
       if (!isActive) {
         item.classList.add('active');
         question.setAttribute('aria-expanded', 'true');
@@ -64,21 +59,17 @@ const modalClose = document.querySelector('.modal-close');
 const demoForm = document.getElementById('demo-form');
 const formSuccess = document.querySelector('.form-success');
 
-// Open modal
 if (modalTriggers && modalOverlay) {
   modalTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
       modalOverlay.classList.add('active');
       document.body.style.overflow = 'hidden';
       if (modalClose) modalClose.focus();
-      
-      // Track modal open event
       trackEvent('Demo', 'Modal Open', 'Demo Request');
     });
   });
 }
 
-// Close modal
 function closeModal() {
   if (modalOverlay) {
     modalOverlay.classList.remove('active');
@@ -89,30 +80,22 @@ function closeModal() {
       demoForm.style.display = 'block';
     }
     
-    if (formSuccess) {
-      formSuccess.classList.remove('active');
-    }
+    if (formSuccess) formSuccess.classList.remove('active');
     
-    // Clear all error states
     document.querySelectorAll('.form-group').forEach(group => {
       group.classList.remove('error');
     });
   }
 }
 
-if (modalClose) {
-  modalClose.addEventListener('click', closeModal);
-}
+if (modalClose) modalClose.addEventListener('click', closeModal);
 
 if (modalOverlay) {
   modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-      closeModal();
-    }
+    if (e.target === modalOverlay) closeModal();
   });
 }
 
-// Escape key to close modal
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) {
     closeModal();
@@ -128,28 +111,24 @@ if (demoForm) {
   demoForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    // Clear previous errors
     document.querySelectorAll('.form-group').forEach(group => {
       group.classList.remove('error');
     });
     
     let isValid = true;
     
-    // Validate name
     const nameInput = document.getElementById('demo-name');
     if (nameInput && !nameInput.value.trim()) {
       nameInput.closest('.form-group').classList.add('error');
       isValid = false;
     }
     
-    // Validate organization
     const orgInput = document.getElementById('demo-org');
     if (orgInput && !orgInput.value.trim()) {
       orgInput.closest('.form-group').classList.add('error');
       isValid = false;
     }
     
-    // Validate email
     const emailInput = document.getElementById('demo-email');
     if (emailInput && (!emailInput.value.trim() || !validateEmail(emailInput.value))) {
       emailInput.closest('.form-group').classList.add('error');
@@ -161,142 +140,60 @@ if (demoForm) {
       return;
     }
     
-    // Submit form using FormSubmit
     try {
       const formData = new FormData(demoForm);
       
       const response = await fetch(demoForm.action, {
         method: 'POST',
         body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
+        headers: { 'Accept': 'application/json' }
       });
       
       if (response.ok) {
-        // Show success message
         if (demoForm) demoForm.style.display = 'none';
         if (formSuccess) formSuccess.classList.add('active');
-        
-        // Track successful submission
         trackEvent('Demo', 'Form Submit Success', 'Demo Request');
-        
         console.log('✅ Demo request sent successfully!');
       } else {
         throw new Error('Form submission failed');
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      
-      // Show success message anyway (FormSubmit might still work)
       if (demoForm) demoForm.style.display = 'none';
       if (formSuccess) formSuccess.classList.add('active');
-      
-      console.log('Demo request data:', {
-        name: nameInput.value,
-        organization: orgInput.value,
-        email: emailInput.value,
-        phone: document.getElementById('demo-phone')?.value || '',
-        message: document.getElementById('demo-message')?.value || ''
-      });
     }
   });
 }
 
-// ==================== Analytics Integration ====================
-/**
- * Track events to analytics platform
- * @param {string} category - Event category
- * @param {string} action - Event action
- * @param {string} label - Event label
- */
+// ==================== Analytics ====================
 function trackEvent(category, action, label) {
   if (!CONFIG.analytics.enabled) {
     console.log('Analytics event:', { category, action, label });
     return;
   }
-  
-  // Google Analytics example (uncomment and configure when ready)
-  // if (window.ga) {
-  //   window.ga('send', 'event', category, action, label);
-  // }
-  
-  // Google Analytics 4 / gtag example
-  // if (window.gtag) {
-  //   window.gtag('event', action, {
-  //     'event_category': category,
-  //     'event_label': label
-  //   });
-  // }
-  
-  // Amplitude example
-  // if (window.amplitude) {
-  //   window.amplitude.getInstance().logEvent(`${category} - ${action}`, {
-  //     label: label
-  //   });
-  // }
-  
-  // Segment example
-  // if (window.analytics) {
-  //   window.analytics.track(`${category} - ${action}`, {
-  //     label: label
-  //   });
-  // }
+  // Wire up your analytics provider here (GA4, Amplitude, Segment, etc.)
 }
 
-/**
- * Track page view
- */
 function trackPageView() {
   if (!CONFIG.analytics.enabled) {
     console.log('Page view tracked');
     return;
   }
-  
-  // Google Analytics example
-  // if (window.ga) {
-  //   window.ga('send', 'pageview');
-  // }
-  
-  // Google Analytics 4 / gtag example
-  // if (window.gtag) {
-  //   window.gtag('event', 'page_view', {
-  //     page_title: document.title,
-  //     page_location: window.location.href,
-  //     page_path: window.location.pathname
-  //   });
-  // }
-  
-  // Amplitude example
-  // if (window.amplitude) {
-  //   window.amplitude.getInstance().logEvent('Page Viewed', {
-  //     path: window.location.pathname,
-  //     title: document.title
-  //   });
-  // }
-  
-  // Segment example
-  // if (window.analytics) {
-  //   window.analytics.page();
-  // }
 }
 
 // ==================== Initialization ====================
 document.addEventListener('DOMContentLoaded', () => {
-  // Track initial page view
   trackPageView();
   
-  // Track scroll depth
   let scrollDepth = 0;
+  
   const trackScrollDepth = () => {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const scrollPercent = Math.round((scrollTop / (documentHeight - windowHeight)) * 100);
     
-    // Track at 25%, 50%, 75%, 100%
-    const milestones = [25, 50, 75, 100];
-    milestones.forEach(milestone => {
+    [25, 50, 75, 100].forEach(milestone => {
       if (scrollPercent >= milestone && scrollDepth < milestone) {
         scrollDepth = milestone;
         trackEvent('Scroll Depth', `${milestone}%`, window.location.pathname);
@@ -304,24 +201,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
   
-  // Throttle scroll tracking
   let scrollTimeout;
   window.addEventListener('scroll', () => {
-    if (scrollTimeout) {
-      clearTimeout(scrollTimeout);
-    }
+    if (scrollTimeout) clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(trackScrollDepth, 100);
   });
   
-  console.log('VoxCare AI landing page initialized');
+  console.log('VoxCare AI initialized');
 });
 
 // ==================== Export for testing ====================
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = {
-    validateEmail,
-    trackEvent,
-    trackPageView,
-    closeModal
-  };
+  module.exports = { validateEmail, trackEvent, trackPageView, closeModal };
 }
