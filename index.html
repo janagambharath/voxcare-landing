@@ -34,6 +34,88 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="./css/styles.css">
+
+  <style>
+    /* ── Improvement 1: Hero credibility line ── */
+    .hero-credibility {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--color-teal);
+      background: rgba(45, 212, 191, 0.08);
+      border: 1px solid rgba(45, 212, 191, 0.25);
+      border-radius: 100px;
+      padding: 0.3rem 0.875rem 0.3rem 0.625rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.01em;
+    }
+    .hero-credibility::before {
+      content: '';
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--color-teal);
+      flex-shrink: 0;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.55; transform: scale(0.8); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-credibility::before { animation: none; }
+    }
+
+    /* ── Improvement 1: CTA micro-subtext ── */
+    .hero-cta-subtext {
+      font-size: 0.8125rem;
+      color: var(--text-body);
+      opacity: 0.55;
+      margin-top: 0.625rem;
+      font-style: italic;
+      letter-spacing: 0.005em;
+    }
+
+    /* ── Improvement 2: Perf card clarifying captions ── */
+    .perf-caption {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.38);
+      text-transform: uppercase;
+      letter-spacing: 0.055em;
+      margin-top: 0.5rem;
+      line-height: 1.4;
+    }
+
+    /* ── Improvement 3: ROI financial-impact line ── */
+    .roi-financial-note {
+      margin-top: 1rem;
+      padding: 0.875rem 1.25rem;
+      background: rgba(45, 212, 191, 0.06);
+      border-left: 3px solid var(--color-teal);
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+      color: var(--text-body);
+      opacity: 0.82;
+      line-height: 1.6;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── Improvement 4: Final CTA subtext ── */
+    .cta-demo-detail {
+      font-size: 0.9375rem;
+      color: rgba(255, 255, 255, 0.62);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      font-style: italic;
+    }
+  </style>
   
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -179,6 +261,12 @@
         <img src="./assets/logo-circle.png" alt="" class="hero-logo">
         
         <div class="hero-eyebrow">AI Voice Receptionist for Healthcare</div>
+
+        <!-- ✦ IMPROVEMENT 1A: credibility line above headline -->
+        <div class="hero-credibility" role="note">
+          Production-ready AI voice receptionist handling real patient calls
+        </div>
+
         <h1>Every patient call answered.<br>Every appointment booked.</h1>
         <p class="hero-subtitle">VoxCare AI handles inbound patient calls around the clock — booking appointments, verifying real-time availability, and sending SMS confirmations automatically.</p>
         
@@ -203,10 +291,12 @@
           <li>Built on healthcare-focused architecture, not a generic chatbot</li>
         </ul>
         
+        <!-- ✦ IMPROVEMENT 1B: updated CTA text + micro-subtext -->
         <div class="hero-ctas">
-          <button class="btn btn-primary" data-modal-trigger>Request Live Demo</button>
+          <button class="btn btn-primary" data-modal-trigger>See a Live Call Demo</button>
           <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
         </div>
+        <p class="hero-cta-subtext">Typical AI response time ~1–2 seconds per conversation turn</p>
         
         <p class="hero-for-whom">Designed for small to mid-size clinics, family practices, and telehealth providers across the US.</p>
       </div>
@@ -265,7 +355,7 @@
       </div>
     </section>
     
-    <!-- ==================== PERFORMANCE & RELIABILITY SECTION (NEW) ==================== -->
+    <!-- ==================== PERFORMANCE & RELIABILITY SECTION ==================== -->
     <section id="performance" class="performance-section">
       <div class="container">
         <div class="section-header reveal-up">
@@ -273,28 +363,38 @@
           <p>Performance numbers your clinic can depend on — measured in production, not benchmarks.</p>
         </div>
         
+        <!-- ✦ IMPROVEMENT 2: clarifying captions added to each metric card -->
         <div class="perf-grid" data-stagger-children>
+
           <div class="perf-card perf-card--highlight">
             <div class="perf-metric">~1–2 sec</div>
             <div class="perf-label">Typical AI response latency</div>
+            <!-- clarifying caption -->
+            <span class="perf-caption">Typical conversational response latency</span>
             <p class="perf-note">Per conversation turn, via Groq-accelerated speech recognition and optimized LLM orchestration. Actual latency varies by network and call complexity.</p>
           </div>
           
           <div class="perf-card">
             <div class="perf-metric">24 / 7</div>
             <div class="perf-label">Availability — including after-hours</div>
+            <!-- clarifying caption -->
+            <span class="perf-caption">24/7 automated call answering</span>
             <p class="perf-note">Patients can book evening, weekend, and holiday appointments. Confirmed bookings appear in the clinic dashboard when staff arrive.</p>
           </div>
           
           <div class="perf-card">
             <div class="perf-metric">Real-time</div>
             <div class="perf-label">Slot locking prevents double-bookings</div>
+            <!-- clarifying caption -->
+            <span class="perf-caption">Real-time slot locking to prevent scheduling conflicts</span>
             <p class="perf-note">Appointment slots are locked the moment a patient selects them — even during simultaneous concurrent calls.</p>
           </div>
           
           <div class="perf-card">
             <div class="perf-metric">Isolated</div>
             <div class="perf-label">Session management per caller</div>
+            <!-- clarifying caption -->
+            <span class="perf-caption">Supports concurrent calls with isolated sessions</span>
             <p class="perf-note">Each call runs in a fully isolated context. No patient data from one call can bleed into another, even under concurrent load.</p>
           </div>
         </div>
@@ -443,6 +543,11 @@
             <p>Clinics using VoxCare AI report measurable improvements in booking capture within the first 30 days of deployment — driven by 24/7 availability, eliminated hold queues, and automated after-hours intake. Long-term, the compounding effect of consistent booking capture and reduced administrative overhead improves both revenue and staff capacity.</p>
           </div>
         </div>
+
+        <!-- ✦ IMPROVEMENT 3: balanced financial-impact note -->
+        <p class="roi-financial-note" role="note">
+          Even a modest increase in captured bookings can quickly offset the cost of the system — without requiring changes to your existing clinical workflow or staffing model.
+        </p>
 
       </div>
     </section>
@@ -705,13 +810,18 @@
     </section>
     
     <!-- ==================== CTA SECTION ==================== -->
+    <!--
+      ✦ IMPROVEMENT 4: headline already matches spec ("Ready to stop missing patient calls?")
+        Updated subtext to sharper, demo-specific copy. Added .cta-demo-detail paragraph.
+    -->
     <section class="cta-section">
       <div class="container">
         <div class="cta-content">
           <h2>Ready to stop missing patient calls?</h2>
-          <p>See VoxCare AI handling a real patient booking call — live, for your clinic's specific workflow.</p>
+          <p>See VoxCare AI answer a real patient call and complete a booking live — no scripts, no slides.</p>
+          <p class="cta-demo-detail">Watch the full conversational flow: greeting, intake, slot verification, and SMS confirmation — tailored to your clinic's workflow.</p>
           <div class="cta-actions">
-            <button class="btn btn-primary btn-lg" data-modal-trigger>Request Live Demo</button>
+            <button class="btn btn-primary btn-lg" data-modal-trigger>See a Live Call Demo</button>
             <a href="mailto:founder@voxcare.online" class="btn btn-outline-light btn-lg">Talk to the Founder</a>
           </div>
           <p class="cta-footnote">No commitment required. Demo includes a live walkthrough of the call flow, dashboard, and integration options.</p>
@@ -835,7 +945,7 @@
   
   <!-- Demo Badge -->
   <div class="demo-badge">
-    <button data-modal-trigger>Request demo</button>
+    <button data-modal-trigger>See a Live Call Demo</button>
   </div>
   
   <!-- Scripts -->
