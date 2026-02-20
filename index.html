@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Optimized Title & Meta Description -->
-  <title>AI Appointment Booking for Clinics | VoxCare AI</title>
-  <meta name="description" content="Enterprise voice AI for US clinics. Automate patient calls, appointments, and triage with HIPAA-aware infrastructure. Reduce missed bookings by 73%.">
+  <title>AI Voice Receptionist for Healthcare Clinics | VoxCare AI</title>
+  <meta name="description" content="VoxCare AI answers every patient call instantly, books appointments in real time, and sends SMS confirmations — 24/7, with ~1–2 second response time. HIPAA-ready architecture with BAA support.">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="AI Appointment Booking for Clinics | VoxCare AI">
-  <meta property="og:description" content="Enterprise voice AI for US clinics. Automate patient calls, appointments, and triage with HIPAA-aware infrastructure.">
+  <meta property="og:title" content="AI Voice Receptionist for Healthcare Clinics | VoxCare AI">
+  <meta property="og:description" content="VoxCare AI answers every patient call instantly, books appointments in real time, and sends SMS confirmations — 24/7, with ~1–2 second response time.">
   <meta property="og:image" content="./assets/product-dashboard.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.voxcare.online">
@@ -18,12 +17,12 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI Appointment Booking for Clinics | VoxCare AI">
-  <meta name="twitter:description" content="Enterprise voice AI for US clinics. Automate patient calls, appointments, and triage with HIPAA-aware infrastructure.">
+  <meta name="twitter:title" content="AI Voice Receptionist for Healthcare Clinics | VoxCare AI">
+  <meta name="twitter:description" content="VoxCare AI answers every patient call instantly, books appointments in real time, and sends SMS confirmations — 24/7.">
   <meta name="twitter:image" content="./assets/product-dashboard.png">
   
-  <!-- Additional SEO Meta Tags -->
-  <meta name="keywords" content="AI receptionist healthcare, clinic appointment automation, HIPAA compliant voice AI, EHR integration, healthcare call automation">
+  <!-- SEO -->
+  <meta name="keywords" content="AI receptionist healthcare, clinic appointment automation, HIPAA ready voice AI, EHR integration, healthcare call automation, medical booking AI">
   <meta name="author" content="VoxCare AI">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.voxcare.online">
@@ -31,12 +30,12 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="./css/styles.css">
   
-  <!-- Enhanced Structured Data (JSON-LD) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,7 +43,7 @@
     "name": "VoxCare AI",
     "url": "https://www.voxcare.online",
     "logo": "https://www.voxcare.online/assets/logo-circle.png",
-    "description": "Enterprise-grade voice automation platform for healthcare providers across the United States",
+    "description": "AI voice receptionist platform for healthcare clinics across the United States, handling appointment booking and patient intake 24/7.",
     "foundingDate": "2024",
     "founder": {
       "@type": "Person",
@@ -82,12 +81,7 @@
       "priceCurrency": "USD",
       "description": "Contact sales for pricing"
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "47"
-    },
-    "description": "AI-powered voice automation platform for healthcare appointment booking, patient intake, and clinical triage"
+    "description": "AI-powered voice receptionist for healthcare clinics — handles patient calls, appointment booking, and clinical intake 24/7."
   }
   </script>
   
@@ -98,10 +92,26 @@
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "How fast does VoxCare AI respond during a patient call?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VoxCare AI is designed for a typical AI response latency of approximately 1–2 seconds per turn. This is achieved through our optimized voice pipeline combining Twilio, Groq-accelerated speech-to-text, and LLM orchestration. Actual latency may vary based on network conditions and call complexity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can VoxCare AI handle multiple patient calls simultaneously?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. VoxCare AI uses isolated session management to handle concurrent inbound calls independently. Each call runs in its own context, preventing data bleed between sessions. Real-time slot locking prevents double-bookings when multiple patients attempt to book the same appointment time."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Is VoxCare AI HIPAA compliant?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "VoxCare AI is built on a HIPAA-aware architecture with encryption in transit and at rest. We offer Business Associate Agreements (BAA) and maintain audit logs for all patient interactions. Security controls are reviewed quarterly."
+          "text": "VoxCare AI is built on a HIPAA-ready architecture with encrypted data handling in transit and at rest, PHI-safe logging, and secure audit trails. We offer Business Associate Agreements (BAA) for enterprise deployments. We recommend all customers review compliance requirements with their legal counsel."
         }
       },
       {
@@ -109,39 +119,23 @@
         "name": "Does VoxCare AI integrate with existing EHR systems?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. VoxCare AI integrates with Epic, Cerner, and other major EHR platforms via HL7 and FHIR standards. We also support scheduling systems including Calendly, Acuity, and custom calendars. Integration typically takes 2-4 weeks."
+          "text": "Yes. VoxCare AI integrates with Epic, Cerner, and other major EHR platforms via HL7 and FHIR standards. We also support scheduling systems including Calendly, Acuity, and custom calendars. Integration typically takes 2–4 weeks."
         }
       },
       {
         "@type": "Question",
-        "name": "What is the deployment timeline?",
+        "name": "What happens if a patient needs to speak to a human receptionist?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most clinics are live within 2-6 weeks depending on EHR complexity and custom workflow requirements. Implementation includes voice model training, integration setup, and staff onboarding."
+          "text": "VoxCare AI supports configurable human handoff. At any point in the call, patients can request to speak to a staff member. Calls are transferred seamlessly with full session context passed to the receiving staff member, so patients never have to repeat themselves."
         }
       },
       {
         "@type": "Question",
-        "name": "How does VoxCare AI ensure call quality and security?",
+        "name": "Can VoxCare AI handle after-hours booking requests?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "VoxCare AI uses production-grade components: Twilio for carrier-grade voice delivery, Whisper (via Groq) for accurate speech recognition, and ElevenLabs for natural text-to-speech. All voice data is encrypted end-to-end and stored in SOC 2 compliant infrastructure."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where is patient data stored?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "All patient data is stored in US-based data centers with encryption at rest. We support data residency requirements and offer on-premise deployment options for enterprises with strict compliance mandates."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What support and SLA does VoxCare AI provide?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Enterprise customers receive 99.9% uptime SLA, 24/7 technical support, dedicated account management, and quarterly business reviews. Standard support includes email response within 4 hours and emergency hotline access."
+          "text": "Yes. VoxCare AI operates 24/7, including evenings, weekends, and holidays. Patients calling after-hours can book appointments against the next available slots, receive SMS confirmations immediately, and have their details ready in the clinic dashboard when staff arrive the next morning."
         }
       }
     ]
@@ -168,44 +162,59 @@
       
       <ul class="nav-links" role="menubar">
         <li role="none"><a href="#features" role="menuitem">Features</a></li>
-        <li role="none"><a href="#about" role="menuitem">About</a></li>
+        <li role="none"><a href="#performance" role="menuitem">Performance</a></li>
+        <li role="none"><a href="#roi" role="menuitem">ROI</a></li>
         <li role="none"><a href="#how-it-works" role="menuitem">How It Works</a></li>
+        <li role="none"><a href="#security" role="menuitem">Security</a></li>
         <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
         <li role="none"><a href="/docs" role="menuitem">Docs</a></li>
       </ul>
     </nav>
   </header>
   
-  <!-- Hero Section - VARIANT 1: ROI-FOCUSED (DEFAULT) -->
+  <!-- ==================== HERO SECTION ==================== -->
   <section class="hero" aria-label="Hero">
     <div class="hero-container">
       <div class="hero-content">
         <img src="./assets/logo-circle.png" alt="" class="hero-logo">
-        <h1>Reduce missed patient bookings by 73%</h1>
-        <p class="hero-tagline">Enterprise voice AI for US healthcare providers</p>
-        <p class="hero-subtitle">VoxCare AI automates patient calls, appointment booking, and clinical triage 24/7. HIPAA-aware architecture with verified production metrics across 1,247+ patient sessions.</p>
+        
+        <div class="hero-eyebrow">AI Voice Receptionist for Healthcare</div>
+        <h1>Every patient call answered.<br>Every appointment booked.</h1>
+        <p class="hero-subtitle">VoxCare AI handles inbound patient calls around the clock — booking appointments, verifying real-time availability, and sending SMS confirmations automatically.</p>
+        
+        <div class="hero-proof-strip">
+          <div class="proof-item">
+            <span class="proof-dot"></span>
+            <span>~1–2 sec AI response time</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-dot"></span>
+            <span>24/7 including after-hours</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-dot"></span>
+            <span>Real patient calls in production</span>
+          </div>
+        </div>
         
         <ul class="hero-bullets">
-          <li>8-state conversational booking flow with SMS/email confirmation</li>
-          <li>Real-time EHR integration and provider availability sync</li>
-          <li>HIPAA-aware infrastructure • BAA available • End-to-end encryption</li>
+          <li>Real-time slot verification — prevents double-bookings automatically</li>
+          <li>Conversational booking in under 3 minutes, with SMS confirmation</li>
+          <li>Built on healthcare-focused architecture, not a generic chatbot</li>
         </ul>
         
         <div class="hero-ctas">
-          <button class="btn btn-primary" data-modal-trigger>Request clinic demo</button>
-          <a href="#trust-section" class="btn btn-secondary">View audit & metrics</a>
+          <button class="btn btn-primary" data-modal-trigger>Request Live Demo</button>
+          <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
         </div>
         
-        <p class="hero-for-whom">Trusted by small to mid-size clinics, family practices, and telehealth providers across the US.</p>
+        <p class="hero-for-whom">Designed for small to mid-size clinics, family practices, and telehealth providers across the US.</p>
       </div>
       
       <div class="hero-visual">
         <div class="video-container">
-          <!-- RECOMMENDED: Replace with product UI screenshot -->
-          <!-- Suggested filename: product-dashboard.png or call-flow-diagram.png -->
-          <!-- Alt text: "VoxCare AI clinic dashboard showing real-time call analytics and appointment confirmations" -->
           <img src="./assets/product-dashboard.png" alt="VoxCare AI clinic dashboard showing real-time call analytics and appointment confirmations" style="width: 100%; border-radius: 12px;">
-          <p class="video-caption">Production dashboard — real-time call monitoring and booking analytics</p>
+          <p class="video-caption">Live clinic dashboard — real-time call monitoring and booking activity</p>
         </div>
       </div>
     </div>
@@ -214,167 +223,393 @@
   <!-- Main Content -->
   <main id="main-content">
     
-    <!-- Security & Compliance Callout -->
+    <!-- ==================== COMPLIANCE BANNER ==================== -->
     <section class="compliance-banner">
       <div class="container">
         <div class="compliance-content">
           <div class="compliance-icon">🔒</div>
           <div class="compliance-text">
-            <strong>HIPAA-aware architecture</strong> • BAA available • Encryption in transit & at rest • SOC 2 Type II in progress
+            <strong>HIPAA-ready architecture</strong> • BAA available for enterprise deployments • Encrypted data handling in transit &amp; at rest • PHI-safe logging
           </div>
         </div>
       </div>
     </section>
     
-    <!-- Features Section -->
+    <!-- ==================== FEATURES SECTION ==================== -->
     <section id="features" class="features">
       <div class="container">
-        <div class="section-header">
-          <h2>Features</h2>
+        <div class="section-header reveal-up">
+          <h2>What VoxCare AI Does for Your Clinic</h2>
+          <p>Outcome-focused automation that fits into your existing workflow — no workflow overhaul required.</p>
         </div>
         
-        <div class="features-grid">
+        <div class="features-grid" data-stagger-children>
           <article class="feature-card">
             <div class="feature-icon">📞</div>
-            <h3>AI Voice Receptionist</h3>
-            <p>Conversational AI agent handles incoming patient calls with 8-state booking flow, real-time provider availability checks, and automated SMS/email confirmations. Integrates with existing clinic phone systems.</p>
+            <h3>Answers every patient call instantly</h3>
+            <p>VoxCare AI picks up every inbound call — no hold times, no missed calls at lunch or after hours. The AI guides patients through a structured booking conversation and confirms appointments before the call ends.</p>
           </article>
           
           <article class="feature-card">
             <div class="feature-icon">🩺</div>
-            <h3>Clinical Triage & Intake</h3>
-            <p>Structured intake protocols capture patient symptoms, insurance details, and visit reason. Produces consistent clinical documentation that feeds directly into EHR workflows with HL7/FHIR compliance.</p>
+            <h3>Collects booking details conversationally</h3>
+            <p>The AI asks for doctor preference, visit reason, insurance details, and availability — in natural conversation. Structured intake data is captured consistently every time and fed directly into your scheduling workflow.</p>
           </article>
           
           <article class="feature-card">
             <div class="feature-icon">⚙️</div>
-            <h3>Production-Grade Voice Infrastructure</h3>
-            <p>Built on Twilio voice platform, Whisper speech recognition (via Groq), ElevenLabs text-to-speech, and LLM orchestration. Proven in production with 892 completed bookings and 99.2% call completion rate.</p>
+            <h3>Handles concurrent calls with real-time slot locking</h3>
+            <p>Isolated session management means multiple patients can call simultaneously without data bleed or booking conflicts. Real-time slot locking prevents double-bookings the moment a slot is selected — before the call even ends.</p>
           </article>
         </div>
       </div>
     </section>
     
-    <!-- Trust / Proof Section -->
-    <section id="trust-section" class="trust-section">
+    <!-- ==================== PERFORMANCE & RELIABILITY SECTION (NEW) ==================== -->
+    <section id="performance" class="performance-section">
       <div class="container">
-        <div class="section-header">
-          <h2>Production Audit • Engineering Maturity • Real Patient Traffic</h2>
-          <p>VoxCare AI is a production system with verified metrics — not a prototype.</p>
+        <div class="section-header reveal-up">
+          <h2>Built for Reliability in Clinical Environments</h2>
+          <p>Performance numbers your clinic can depend on — measured in production, not benchmarks.</p>
         </div>
         
-        <div class="trust-grid">
+        <div class="perf-grid" data-stagger-children>
+          <div class="perf-card perf-card--highlight">
+            <div class="perf-metric">~1–2 sec</div>
+            <div class="perf-label">Typical AI response latency</div>
+            <p class="perf-note">Per conversation turn, via Groq-accelerated speech recognition and optimized LLM orchestration. Actual latency varies by network and call complexity.</p>
+          </div>
+          
+          <div class="perf-card">
+            <div class="perf-metric">24 / 7</div>
+            <div class="perf-label">Availability — including after-hours</div>
+            <p class="perf-note">Patients can book evening, weekend, and holiday appointments. Confirmed bookings appear in the clinic dashboard when staff arrive.</p>
+          </div>
+          
+          <div class="perf-card">
+            <div class="perf-metric">Real-time</div>
+            <div class="perf-label">Slot locking prevents double-bookings</div>
+            <p class="perf-note">Appointment slots are locked the moment a patient selects them — even during simultaneous concurrent calls.</p>
+          </div>
+          
+          <div class="perf-card">
+            <div class="perf-metric">Isolated</div>
+            <div class="perf-label">Session management per caller</div>
+            <p class="perf-note">Each call runs in a fully isolated context. No patient data from one call can bleed into another, even under concurrent load.</p>
+          </div>
+        </div>
+        
+        <div class="perf-production-note">
+          <span class="prod-badge">● Live in Production</span>
+          Already handling real patient calls in production environments — not a prototype or demo environment.
+        </div>
+      </div>
+    </section>
+    
+    <!-- ==================== TRUST / PROOF SECTION ==================== -->
+    <section id="trust-section" class="trust-section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>Production Metrics — Verified, Real Patient Traffic</h2>
+          <p>VoxCare AI is a live production system, not a proof-of-concept.</p>
+        </div>
+        
+        <div class="trust-grid" data-stagger-children>
           <div class="trust-card">
             <div class="trust-label">Current Release</div>
             <div class="trust-value">v48.3</div>
-            <div class="trust-subtitle">Verified • Production audit</div>
+            <div class="trust-subtitle">Verified production build</div>
           </div>
           
           <div class="trust-card">
-            <div class="trust-label">Engineering Maturity</div>
-            <div class="trust-value">455 commits</div>
-            <div class="trust-subtitle">377 deployments • Verified</div>
+            <div class="trust-label">Engineering Commits</div>
+            <div class="trust-value">455+</div>
+            <div class="trust-subtitle">377 deployments • Active development</div>
           </div>
           
           <div class="trust-card">
             <div class="trust-label">Patient Sessions</div>
             <div class="trust-value">1,247</div>
-            <div class="trust-subtitle">Real production traffic</div>
+            <div class="trust-subtitle">Real inbound call traffic</div>
           </div>
           
           <div class="trust-card">
             <div class="trust-label">Completed Bookings</div>
             <div class="trust-value">892</div>
-            <div class="trust-subtitle">71.5% conversion rate</div>
+            <div class="trust-subtitle">71.5% call-to-booking rate</div>
+          </div>
+        </div>
+        
+        <div class="founder-credibility">
+          <p>VoxCare AI is founded and led by <strong>Janagam Bharath</strong>, Founder &amp; Lead Engineer — built specifically for the needs of US healthcare clinics, not adapted from a generic chatbot platform.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ==================== ROI SECTION ==================== -->
+    <section id="roi" class="roi-section" aria-labelledby="roi-heading">
+      <div class="container">
+
+        <!-- Section Header -->
+        <div class="section-header reveal-up">
+          <div class="roi-eyebrow">Business Impact &amp; ROI</div>
+          <h2 id="roi-heading">Every missed call is a missed appointment.<br>Every missed appointment costs your clinic.</h2>
+          <p>Industry data consistently shows that clinics lose 15–30% of potential appointments to missed or unanswered calls. VoxCare AI closes that gap — capturing revenue that currently slips through voicemail, hold queues, and after-hours gaps.</p>
+        </div>
+
+        <!-- ROI Cards Grid -->
+        <div class="roi-grid" role="list" data-stagger-children>
+
+          <!-- Card 1: Recovered Missed Appointments -->
+          <article class="roi-card" role="listitem" aria-label="ROI: Recovered Missed Appointments">
+            <div class="roi-card-header">
+              <div class="roi-icon-wrap roi-icon-wrap--blue" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.21 10 19.79 19.79 0 01.15 1.28 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+              </div>
+              <div class="roi-card-stat">
+                <span class="roi-stat-number" data-count-to="73" data-suffix="%">0%</span>
+                <span class="roi-stat-label">fewer missed bookings</span>
+              </div>
+            </div>
+            <h3 class="roi-card-title">Recovered Missed Appointments</h3>
+            <p class="roi-card-desc">VoxCare AI answers every inbound call — at lunch, evenings, and weekends — turning calls that would have hit voicemail into confirmed appointments. For a clinic receiving 40 calls per day, even a 20% recovery improvement translates to dozens of additional bookings per week.</p>
+            <div class="roi-card-footer">
+              <span class="roi-tag">Immediate revenue recovery</span>
+            </div>
+          </article>
+
+          <!-- Card 2: Reduced Reception Workload -->
+          <article class="roi-card" role="listitem" aria-label="ROI: Reduced Reception Workload">
+            <div class="roi-card-header">
+              <div class="roi-icon-wrap roi-icon-wrap--teal" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <div class="roi-card-stat">
+                <span class="roi-stat-number" data-count-to="60" data-suffix="%">0%</span>
+                <span class="roi-stat-label">reduction in routine call volume</span>
+              </div>
+            </div>
+            <h3 class="roi-card-title">Reduced Reception Workload</h3>
+            <p class="roi-card-desc">Scheduling calls, appointment confirmations, and routine intake are handled automatically by VoxCare AI. Front-desk staff shift focus to in-clinic patient experience and complex care coordination — higher-value work that benefits patients and reduces staff burnout.</p>
+            <div class="roi-card-footer">
+              <span class="roi-tag">Operational efficiency</span>
+            </div>
+          </article>
+
+          <!-- Card 3: After-Hours Booking Capture -->
+          <article class="roi-card" role="listitem" aria-label="ROI: After-Hours Booking Capture">
+            <div class="roi-card-header">
+              <div class="roi-icon-wrap roi-icon-wrap--violet" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="roi-card-stat">
+                <span class="roi-stat-number" data-count-to="24" data-suffix="/7">0</span>
+                <span class="roi-stat-label">active booking window</span>
+              </div>
+            </div>
+            <h3 class="roi-card-title">After-Hours Booking Capture</h3>
+            <p class="roi-card-desc">Patients searching for appointments in the evenings and on weekends no longer reach a voicemail. VoxCare AI captures these bookings in real time — they appear in your clinic dashboard when staff arrive the next morning, fully confirmed and ready to go.</p>
+            <div class="roi-card-footer">
+              <span class="roi-tag">New booking channel</span>
+            </div>
+          </article>
+
+          <!-- Card 4: Patient Experience & Retention -->
+          <article class="roi-card" role="listitem" aria-label="ROI: Improved Patient Experience">
+            <div class="roi-card-header">
+              <div class="roi-icon-wrap roi-icon-wrap--green" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </div>
+              <div class="roi-card-stat">
+                <span class="roi-stat-number" data-count-to="3" data-suffix=" min">0</span>
+                <span class="roi-stat-label">avg. booking time</span>
+              </div>
+            </div>
+            <h3 class="roi-card-title">Improved Patient Experience &amp; Retention</h3>
+            <p class="roi-card-desc">Patients who can book quickly and without hold times are more likely to return. Instant call pickup, conversational booking, and immediate SMS confirmations signal a professional, responsive clinic — building the trust that drives long-term patient retention.</p>
+            <div class="roi-card-footer">
+              <span class="roi-tag">Long-term patient value</span>
+            </div>
+          </article>
+
+        </div><!-- /.roi-grid -->
+
+        <!-- Closing summary -->
+        <div class="roi-summary reveal-up">
+          <div class="roi-summary-inner">
+            <div class="roi-summary-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <p>Clinics using VoxCare AI report measurable improvements in booking capture within the first 30 days of deployment — driven by 24/7 availability, eliminated hold queues, and automated after-hours intake. Long-term, the compounding effect of consistent booking capture and reduced administrative overhead improves both revenue and staff capacity.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SECURITY & COMPLIANCE SECTION ==================== -->
+    <section id="security" class="security-section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>Security &amp; Compliance</h2>
+          <p>A healthcare-focused architecture designed with data protection as a core requirement — not an afterthought.</p>
+        </div>
+        
+        <div class="security-grid" data-stagger-children>
+          <div class="security-card">
+            <div class="security-icon">🔐</div>
+            <h3>HIPAA-Ready Architecture</h3>
+            <p>VoxCare AI is built on a HIPAA-ready infrastructure with Business Associate Agreements (BAA) available for enterprise deployments. We recommend all customers work with their legal and compliance teams to confirm their obligations.</p>
+          </div>
+          
+          <div class="security-card">
+            <div class="security-icon">🛡️</div>
+            <h3>Encrypted Data Handling</h3>
+            <p>All patient data is encrypted in transit using TLS and at rest in US-based data centers. No patient audio or session data is retained beyond what is required for booking and audit purposes.</p>
+          </div>
+          
+          <div class="security-card">
+            <div class="security-icon">📋</div>
+            <h3>PHI-Safe Logging &amp; Audit Trail</h3>
+            <p>Interaction logs are structured to avoid unnecessary PHI retention. A secure audit trail is maintained for all booking and call events, supporting compliance reviews and incident investigation.</p>
+          </div>
+          
+          <div class="security-card">
+            <div class="security-icon">🏗️</div>
+            <h3>SOC 2 Type II In Progress</h3>
+            <p>We are actively pursuing SOC 2 Type II certification. Enterprise customers receive quarterly security reviews and can request our current security posture documentation.</p>
+          </div>
+        </div>
+        
+        <div class="security-disclaimer">
+          VoxCare AI provides HIPAA-ready infrastructure and BAA support. Customers are responsible for their own HIPAA compliance obligations and should consult qualified legal counsel regarding their specific requirements.
+        </div>
+      </div>
+    </section>
+    
+    <!-- ==================== HOW IT WORKS SECTION ==================== -->
+    <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>How a VoxCare AI Call Works</h2>
+          <p>A structured, conversational flow — from first ring to confirmed booking — aligned to real clinical workflows.</p>
+        </div>
+        
+        <div class="flow-grid" data-stagger-children>
+          <div class="flow-step">
+            <div class="flow-number">1</div>
+            <div class="flow-content">
+              <h3>Call Received</h3>
+              <p>Patient calls your clinic number. VoxCare AI answers immediately — no hold time, no IVR maze.</p>
+            </div>
+          </div>
+          
+          <div class="flow-connector" aria-hidden="true">→</div>
+          
+          <div class="flow-step">
+            <div class="flow-number">2</div>
+            <div class="flow-content">
+              <h3>Warm Greeting</h3>
+              <p>The AI introduces itself as your clinic's virtual receptionist and confirms the patient's reason for calling.</p>
+            </div>
+          </div>
+          
+          <div class="flow-connector" aria-hidden="true">→</div>
+          
+          <div class="flow-step">
+            <div class="flow-number">3</div>
+            <div class="flow-content">
+              <h3>Doctor &amp; Visit Selection</h3>
+              <p>Patient selects their preferred provider and visit type conversationally. Insurance and contact details are collected.</p>
+            </div>
+          </div>
+          
+          <div class="flow-connector" aria-hidden="true">→</div>
+          
+          <div class="flow-step">
+            <div class="flow-number">4</div>
+            <div class="flow-content">
+              <h3>Real-Time Slot Verification</h3>
+              <p>VoxCare AI checks live provider availability. Slot is locked immediately upon selection — preventing any double-booking.</p>
+            </div>
+          </div>
+          
+          <div class="flow-connector" aria-hidden="true">→</div>
+          
+          <div class="flow-step">
+            <div class="flow-number">5</div>
+            <div class="flow-content">
+              <h3>Queue Position Assigned</h3>
+              <p>Patient receives their queue number and estimated wait context. Booking is recorded in the system in real time.</p>
+            </div>
+          </div>
+          
+          <div class="flow-connector" aria-hidden="true">→</div>
+          
+          <div class="flow-step">
+            <div class="flow-number">6</div>
+            <div class="flow-content">
+              <h3>SMS Confirmation Sent</h3>
+              <p>A summary SMS is sent to the patient immediately after the call — date, time, provider, and clinic contact details included.</p>
+            </div>
+          </div>
+          
+          <div class="flow-connector" aria-hidden="true">→</div>
+          
+          <div class="flow-step">
+            <div class="flow-number">7</div>
+            <div class="flow-content">
+              <h3>Clinic Dashboard Updated</h3>
+              <p>Your team sees the new booking in the live clinic dashboard — ready for review, with full call context and intake data.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- About VoxCare AI Section -->
-    <section id="about" class="about-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>About VoxCare AI</h2>
-        </div>
-        
-        <div class="about-content">
-          <p>VoxCare AI is an enterprise-grade voice automation platform designed for US healthcare providers. The system handles patient communications, appointment scheduling, and clinical intake through production-ready AI infrastructure, reducing front-desk workload while improving patient access to care. VoxCare AI integrates with existing EHR systems and scheduling workflows, delivering HIPAA-aware automation without requiring operational changes. The company is founded and led by Janagam Bharath, Founder & Lead Engineer.</p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Tech Stack Section -->
+    <!-- ==================== TECH STACK SECTION ==================== -->
     <section class="tech-stack">
       <div class="container">
         <div class="section-header">
           <h2>Technology Stack</h2>
-          <p>Production-grade components powering the voice pipeline</p>
+          <p>Production-grade components selected specifically for healthcare voice workloads.</p>
         </div>
         
         <div class="tech-grid">
           <div class="tech-item">
-            <strong>Voice Calls</strong>
-            <span>Twilio</span>
+            <strong>Voice Infrastructure</strong>
+            <span>Twilio — carrier-grade call routing</span>
           </div>
           <div class="tech-item">
             <strong>Speech-to-Text</strong>
-            <span>Whisper (Groq) in production</span>
+            <span>Whisper via Groq — optimized for low-latency recognition</span>
           </div>
           <div class="tech-item">
             <strong>Text-to-Speech</strong>
-            <span>ElevenLabs</span>
+            <span>ElevenLabs — natural, clinic-appropriate voice</span>
           </div>
           <div class="tech-item">
-            <strong>Conversation</strong>
-            <span>LLM-driven orchestration</span>
+            <strong>AI Orchestration</strong>
+            <span>LLM-driven conversation with session memory via Redis</span>
           </div>
           <div class="tech-item">
-            <strong>Pipeline</strong>
-            <span>External STT (browser STT removed)</span>
+            <strong>Booking Storage</strong>
+            <span>PostgreSQL — structured, auditable appointment records</span>
           </div>
           <div class="tech-item">
             <strong>Notifications</strong>
-            <span>SendGrid / Gmail confirmations</span>
+            <span>SendGrid / Gmail — immediate SMS &amp; email confirmations</span>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-      <div class="container">
-        <div class="section-header">
-          <h2>How It Works</h2>
-        </div>
-        
-        <div class="steps-grid">
-          <article class="step">
-            <div class="step-number">1</div>
-            <h3>Integration</h3>
-            <p>Connect VoxCare AI to your phone system and EHR. Standard integrations deploy in 2-4 weeks.</p>
-          </article>
-          
-          <article class="step">
-            <div class="step-number">2</div>
-            <h3>Configuration</h3>
-            <p>Configure booking flows, triage protocols, and provider schedules via secure admin console.</p>
-          </article>
-          
-          <article class="step">
-            <div class="step-number">3</div>
-            <h3>Production</h3>
-            <p>Go live with 24/7 voice automation, real-time booking confirmations, and clinical documentation.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Integrations Section -->
+    <!-- ==================== INTEGRATIONS SECTION ==================== -->
     <section class="integrations">
       <div class="container">
         <div class="section-header">
           <h2>Integrations</h2>
+          <p>Connects to the EHR and scheduling tools your clinic already uses.</p>
         </div>
         
         <div class="integrations-grid">
@@ -382,13 +617,13 @@
           <div class="integration-item">Cerner</div>
           <div class="integration-item">Twilio</div>
           <div class="integration-item">Calendly</div>
+          <div class="integration-item">Acuity</div>
           <div class="integration-item">Slack</div>
-          <div class="integration-item">Zoom</div>
         </div>
       </div>
     </section>
     
-    <!-- FAQ Section -->
+    <!-- ==================== FAQ SECTION ==================== -->
     <section id="faq" class="faq">
       <div class="container">
         <div class="section-header">
@@ -398,51 +633,61 @@
         <div class="faq-list">
           <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <button class="faq-question" aria-expanded="false">
+              <span itemprop="name">How fast does VoxCare AI respond during a patient call?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">VoxCare AI is designed for a typical AI response latency of approximately 1–2 seconds per conversation turn. This is achieved through our optimized voice pipeline: Twilio for call handling, Groq-accelerated Whisper for speech recognition, and efficient LLM orchestration. Actual latency may vary based on network conditions and call complexity.</p>
+            </div>
+          </article>
+          
+          <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false">
+              <span itemprop="name">Can VoxCare AI handle multiple patient calls at the same time?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Yes. VoxCare AI uses isolated session management to handle concurrent inbound calls independently. Each call runs in its own context, preventing any data from one patient's session affecting another. Real-time slot locking also ensures that two patients calling simultaneously cannot accidentally book the same appointment slot.</p>
+            </div>
+          </article>
+          
+          <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false">
               <span itemprop="name">Is VoxCare AI HIPAA compliant?</span>
               <span class="faq-icon" aria-hidden="true">▼</span>
             </button>
             <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">VoxCare AI is built on a HIPAA-aware architecture with encryption in transit and at rest. We offer Business Associate Agreements (BAA) and maintain audit logs for all patient interactions. Security controls are reviewed quarterly.</p>
+              <p itemprop="text">VoxCare AI is built on a HIPAA-ready architecture with encrypted data handling in transit and at rest, PHI-safe logging, and secure audit trails. We offer Business Associate Agreements (BAA) for enterprise deployments. All customers should review their specific HIPAA obligations with qualified legal counsel — VoxCare AI provides the infrastructure foundation, not a compliance guarantee.</p>
             </div>
           </article>
           
           <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <button class="faq-question" aria-expanded="false">
-              <span itemprop="name">Does VoxCare AI integrate with existing EHR systems?</span>
+              <span itemprop="name">What happens if a patient needs to speak to a human?</span>
               <span class="faq-icon" aria-hidden="true">▼</span>
             </button>
             <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Yes. VoxCare AI integrates with Epic, Cerner, and other major EHR platforms via HL7 and FHIR standards. We also support scheduling systems including Calendly, Acuity, and custom calendars. Integration typically takes 2-4 weeks.</p>
+              <p itemprop="text">VoxCare AI supports configurable human handoff at any point in the call. If a patient requests a staff member, the call is transferred seamlessly with full session context passed to the receiving team member — so the patient never has to repeat their information. Handoff rules are fully configurable per clinic workflow.</p>
             </div>
           </article>
           
           <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <button class="faq-question" aria-expanded="false">
-              <span itemprop="name">What is the deployment timeline?</span>
+              <span itemprop="name">Can VoxCare AI handle after-hours booking?</span>
               <span class="faq-icon" aria-hidden="true">▼</span>
             </button>
             <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Most clinics are live within 2-6 weeks depending on EHR complexity and custom workflow requirements. Implementation includes voice model training, integration setup, and staff onboarding.</p>
+              <p itemprop="text">Yes. VoxCare AI operates 24/7 — evenings, weekends, and holidays. Patients calling after hours can book against the next available slots and receive an SMS confirmation immediately. All bookings appear in the clinic dashboard when staff arrive, ready for the day ahead. No calls go to voicemail.</p>
             </div>
           </article>
           
           <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <button class="faq-question" aria-expanded="false">
-              <span itemprop="name">How does VoxCare AI ensure call quality and security?</span>
+              <span itemprop="name">Does VoxCare AI integrate with our existing EHR?</span>
               <span class="faq-icon" aria-hidden="true">▼</span>
             </button>
             <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">VoxCare AI uses production-grade components: Twilio for carrier-grade voice delivery, Whisper (via Groq) for accurate speech recognition, and ElevenLabs for natural text-to-speech. All voice data is encrypted end-to-end and stored in SOC 2 compliant infrastructure.</p>
-            </div>
-          </article>
-          
-          <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <button class="faq-question" aria-expanded="false">
-              <span itemprop="name">Where is patient data stored?</span>
-              <span class="faq-icon" aria-hidden="true">▼</span>
-            </button>
-            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">All patient data is stored in US-based data centers with encryption at rest. We support data residency requirements and offer on-premise deployment options for enterprises with strict compliance mandates.</p>
+              <p itemprop="text">Yes. VoxCare AI integrates with Epic, Cerner, and other major EHR platforms via HL7 and FHIR standards. We also support scheduling systems including Calendly, Acuity, and custom calendar setups. Standard integration deployments typically take 2–4 weeks, depending on EHR complexity and custom workflow requirements.</p>
             </div>
           </article>
           
@@ -452,31 +697,49 @@
               <span class="faq-icon" aria-hidden="true">▼</span>
             </button>
             <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Enterprise customers receive 99.9% uptime SLA, 24/7 technical support, dedicated account management, and quarterly business reviews. Standard support includes email response within 4 hours and emergency hotline access.</p>
+              <p itemprop="text">Enterprise customers receive a 99.9% uptime SLA, 24/7 technical support, dedicated account management, and quarterly business reviews. Standard support includes email response within 4 hours and emergency hotline access. All plans include onboarding, voice model configuration, and integration setup support.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
+    
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to stop missing patient calls?</h2>
+          <p>See VoxCare AI handling a real patient booking call — live, for your clinic's specific workflow.</p>
+          <div class="cta-actions">
+            <button class="btn btn-primary btn-lg" data-modal-trigger>Request Live Demo</button>
+            <a href="mailto:founder@voxcare.online" class="btn btn-outline-light btn-lg">Talk to the Founder</a>
+          </div>
+          <p class="cta-footnote">No commitment required. Demo includes a live walkthrough of the call flow, dashboard, and integration options.</p>
+        </div>
+      </div>
+    </section>
+    
   </main>
   
-  <!-- Footer -->
+  <!-- ==================== FOOTER ==================== -->
   <footer>
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-brand">
           <h3>VoxCare AI</h3>
-          <p>Enterprise voice automation for US healthcare providers. HIPAA-aware infrastructure trusted by clinics nationwide.</p>
-          <p style="margin-top: 1rem; font-size: 0.9rem;">VoxCare AI is founded and led by Janagam Bharath, Founder & Lead Engineer.</p>
-          <div class="security-badge">HIPAA-aware • BAA available • SOC 2 in progress</div>
+          <p>AI voice receptionist for US healthcare clinics. Built on HIPAA-ready infrastructure, handling real patient calls in production.</p>
+          <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.75;">Founded and led by <strong>Janagam Bharath</strong>, Founder &amp; Lead Engineer.</p>
+          <div class="security-badge">HIPAA-ready • BAA available • Encrypted data handling</div>
         </div>
         
         <div class="footer-section">
           <h4>Product</h4>
           <ul class="footer-links">
             <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#performance">Performance</a></li>
+            <li><a href="#roi">Business ROI</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#security">Security</a></li>
             <li><a href="/docs">Documentation</a></li>
           </ul>
         </div>
@@ -491,65 +754,67 @@
         </div>
         
         <div class="footer-section">
-          <h4>Legal & Support</h4>
+          <h4>Legal &amp; Support</h4>
           <ul class="footer-links">
             <li><a href="mailto:founder@voxcare.online">Contact Sales</a></li>
             <li><a href="https://wa.me/917995854994" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
             <li><a href="/privacy">Privacy Policy</a></li>
             <li><a href="/terms">Terms of Service</a></li>
-            <li><a href="/baa">BAA Request</a></li>
+            <li><a href="/baa">Request BAA</a></li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
         <p>&copy; 2026 VoxCare AI. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8125rem; opacity: 0.6;">VoxCare AI provides HIPAA-ready infrastructure. Customers remain responsible for their own HIPAA compliance obligations.</p>
       </div>
     </div>
   </footer>
   
-  <!-- Demo Request Modal -->
+  <!-- ==================== DEMO REQUEST MODAL ==================== -->
   <div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal">
       <div class="modal-header">
-        <h2 id="modal-title">Request a Clinic Demo</h2>
+        <h2 id="modal-title">Request a Live Demo</h2>
         <button class="modal-close" aria-label="Close modal">&times;</button>
       </div>
       
       <div class="modal-body">
+        <p style="margin-bottom: 1.5rem; color: var(--color-navy); opacity: 0.8; font-size: 0.9375rem;">We'll walk you through a live call flow demo tailored to your clinic's specific scheduling workflow.</p>
+        
         <form id="demo-form" action="https://formsubmit.co/founder@voxcare.online" method="POST">
-          <!-- FormSubmit Configuration -->
-          <input type="hidden" name="_subject" value="VoxCare AI - Enterprise Demo Request">
+          <input type="hidden" name="_subject" value="VoxCare AI — Live Demo Request">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
           <input type="text" name="_honey" style="display:none">
           
           <div class="form-group">
             <label for="demo-name">Name <span aria-label="required">*</span></label>
-            <input type="text" id="demo-name" name="name" required aria-required="true">
+            <input type="text" id="demo-name" name="name" required aria-required="true" placeholder="Your full name">
             <span class="form-error">Please enter your name</span>
           </div>
           
           <div class="form-group">
-            <label for="demo-org">Organization <span aria-label="required">*</span></label>
-            <input type="text" id="demo-org" name="organization" required aria-required="true">
+            <label for="demo-org">Clinic / Organization <span aria-label="required">*</span></label>
+            <input type="text" id="demo-org" name="organization" required aria-required="true" placeholder="Clinic or practice name">
             <span class="form-error">Please enter your organization</span>
           </div>
           
           <div class="form-group">
-            <label for="demo-email">Email <span aria-label="required">*</span></label>
-            <input type="email" id="demo-email" name="email" required aria-required="true">
-            <span class="form-error">Please enter a valid email</span>
+            <label for="demo-email">Work Email <span aria-label="required">*</span></label>
+            <input type="email" id="demo-email" name="email" required aria-required="true" placeholder="you@yourclinic.com">
+            <span class="form-error">Please enter a valid email address</span>
           </div>
           
           <div class="form-group">
-            <label for="demo-phone">Phone</label>
-            <input type="tel" id="demo-phone" name="phone">
+            <label for="demo-phone">Phone (optional)</label>
+            <input type="tel" id="demo-phone" name="phone" placeholder="+1 (555) 000-0000">
           </div>
           
           <div class="form-group">
-            <label for="demo-message">Message</label>
-            <textarea id="demo-message" name="message" placeholder="Tell us about your clinic and appointment volume"></textarea>
+            <label for="demo-message">Tell us about your clinic</label>
+            <textarea id="demo-message" name="message" placeholder="Approximate call volume per day, EHR system in use, biggest scheduling challenge..."></textarea>
           </div>
           
           <button type="submit" class="btn btn-primary form-submit">Request Demo</button>
@@ -557,10 +822,10 @@
         
         <div class="form-success">
           <p><strong>✓ Demo request received</strong></p>
-          <p>Our team will contact you within 24 hours to schedule your personalized clinic demo.</p>
-          <p style="margin-top: 1.5rem;"><strong>Need immediate assistance?</strong></p>
+          <p>Our team will reach out within 24 hours to schedule your personalized walkthrough.</p>
+          <p style="margin-top: 1.5rem;"><strong>Need to talk sooner?</strong></p>
           <p>
-            📧 Sales: <a href="mailto:founder@voxcare.online">founder@voxcare.online</a><br>
+            📧 <a href="mailto:founder@voxcare.online">founder@voxcare.online</a><br>
             💬 WhatsApp: <a href="https://wa.me/917995854994" target="_blank" rel="noopener noreferrer">+91 7995 854 994</a>
           </p>
         </div>
@@ -575,5 +840,6 @@
   
   <!-- Scripts -->
   <script src="./js/main.js"></script>
+  <script src="./js/animations.js"></script>
 </body>
 </html>
