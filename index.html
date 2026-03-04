@@ -34,6 +34,7 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/whatsapp.css">
 
   <style>
     /* ── Improvement 1: Hero credibility line ── */
@@ -369,7 +370,6 @@
           <div class="perf-card perf-card--highlight">
             <div class="perf-metric">~1–2 sec</div>
             <div class="perf-label">Typical AI response latency</div>
-            <!-- clarifying caption -->
             <span class="perf-caption">Typical conversational response latency</span>
             <p class="perf-note">Per conversation turn, via Groq-accelerated speech recognition and optimized LLM orchestration. Actual latency varies by network and call complexity.</p>
           </div>
@@ -377,7 +377,6 @@
           <div class="perf-card">
             <div class="perf-metric">24 / 7</div>
             <div class="perf-label">Availability — including after-hours</div>
-            <!-- clarifying caption -->
             <span class="perf-caption">24/7 automated call answering</span>
             <p class="perf-note">Patients can book evening, weekend, and holiday appointments. Confirmed bookings appear in the clinic dashboard when staff arrive.</p>
           </div>
@@ -385,7 +384,6 @@
           <div class="perf-card">
             <div class="perf-metric">Real-time</div>
             <div class="perf-label">Slot locking prevents double-bookings</div>
-            <!-- clarifying caption -->
             <span class="perf-caption">Real-time slot locking to prevent scheduling conflicts</span>
             <p class="perf-note">Appointment slots are locked the moment a patient selects them — even during simultaneous concurrent calls.</p>
           </div>
@@ -393,7 +391,6 @@
           <div class="perf-card">
             <div class="perf-metric">Isolated</div>
             <div class="perf-label">Session management per caller</div>
-            <!-- clarifying caption -->
             <span class="perf-caption">Supports concurrent calls with isolated sessions</span>
             <p class="perf-note">Each call runs in a fully isolated context. No patient data from one call can bleed into another, even under concurrent load.</p>
           </div>
@@ -808,12 +805,134 @@
         </div>
       </div>
     </section>
+
+    <!-- ==================== WHATSAPP BOOKING SECTION ==================== -->
+    <section id="whatsapp-booking" class="whatsapp-section" aria-labelledby="wa-heading">
+      <div class="container">
+
+        <!-- Intro: text + chat preview -->
+        <div class="wa-intro reveal-up">
+
+          <!-- Left: text content -->
+          <div class="wa-intro-text">
+            <div class="wa-eyebrow">WhatsApp Booking</div>
+            <h2 id="wa-heading">Book Appointments on WhatsApp</h2>
+            <p>Patients can now book appointments directly through WhatsApp — no app download, no hold music, no waiting. VoxCare's AI receptionist handles the entire conversation and confirms the slot instantly.</p>
+            <a
+              href="https://wa.me/918712531028?text=Hi%20I%20want%20to%20book%20an%20appointment"
+              class="btn-whatsapp voxcare-whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Book an appointment on WhatsApp"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Book on WhatsApp
+            </a>
+          </div>
+
+          <!-- Right: mock WhatsApp chat preview -->
+          <div class="wa-chat-preview" aria-hidden="true" role="presentation">
+            <div class="wa-chat-header">
+              <div class="wa-chat-avatar">🏥</div>
+              <div class="wa-chat-header-info">
+                <h4>VoxCare AI Receptionist</h4>
+                <span>Online • AI-powered</span>
+              </div>
+            </div>
+            <div class="wa-chat-body">
+              <div class="wa-bubble wa-bubble--received">
+                👋 Hi! I'm the VoxCare AI receptionist. Which doctor would you like to book with?
+                <time>10:02 AM</time>
+              </div>
+              <div class="wa-bubble wa-bubble--sent">
+                Dr. Sharma please, tomorrow afternoon
+                <time>10:03 AM</time>
+              </div>
+              <div class="wa-bubble wa-bubble--received">
+                ✅ Got it! Dr. Sharma has a slot at 3:30 PM tomorrow. Shall I confirm it for you?
+                <time>10:03 AM</time>
+              </div>
+              <div class="wa-bubble wa-bubble--sent">
+                Yes, please confirm
+                <time>10:04 AM</time>
+              </div>
+              <div class="wa-bubble wa-bubble--received">
+                🎉 Booked! Your token number is #14. See you tomorrow at 3:30 PM.
+                <time>10:04 AM</time>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.wa-intro -->
+
+        <!-- Feature cards -->
+        <div class="wa-features-grid" data-stagger-children>
+
+          <div class="wa-feature-card">
+            <div class="wa-feature-icon">💬</div>
+            <h3>Book directly on WhatsApp</h3>
+            <p>Patients start a booking conversation from any device — just by messaging the clinic's WhatsApp number. No portals, no apps, no logins.</p>
+          </div>
+
+          <div class="wa-feature-card">
+            <div class="wa-feature-icon">📲</div>
+            <h3>No app download required</h3>
+            <p>WhatsApp is already on over 2 billion phones worldwide. Your patients can book instantly without installing anything new.</p>
+          </div>
+
+          <div class="wa-feature-card">
+            <div class="wa-feature-icon">🤖</div>
+            <h3>AI receptionist handles the conversation</h3>
+            <p>VoxCare's AI guides the patient through doctor selection, visit type, and availability — just like a human receptionist, available 24/7.</p>
+          </div>
+
+          <div class="wa-feature-card">
+            <div class="wa-feature-icon">✅</div>
+            <h3>Doctor confirmation prevents overbooking</h3>
+            <p>Slots are locked the moment they are selected. The doctor confirmation workflow ensures no two patients are ever booked for the same time.</p>
+          </div>
+
+          <div class="wa-feature-card">
+            <div class="wa-feature-icon">🔢</div>
+            <h3>Token queue system manages patient flow</h3>
+            <p>Each patient receives a unique token number. The queue system organises patient arrival order and reduces waiting room congestion.</p>
+          </div>
+
+          <div class="wa-feature-card">
+            <div class="wa-feature-icon">⚡</div>
+            <h3>Instant booking confirmations</h3>
+            <p>A confirmation message is sent immediately after booking — with token number, date, time, and doctor name — directly in WhatsApp.</p>
+          </div>
+
+        </div><!-- /.wa-features-grid -->
+
+        <!-- Bottom CTA strip -->
+        <div class="wa-cta-strip reveal-fade">
+          <p>
+            Ready to offer WhatsApp booking at your clinic?
+            <span>Start a conversation with VoxCare AI right now — no setup required.</span>
+          </p>
+          <a
+            href="https://wa.me/918712531028?text=Hi%20I%20want%20to%20book%20an%20appointment"
+            class="btn-whatsapp voxcare-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open WhatsApp and book an appointment"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Book on WhatsApp
+          </a>
+        </div>
+
+      </div><!-- /.container -->
+    </section>
+    <!-- ==================== END WHATSAPP BOOKING SECTION ==================== -->
     
     <!-- ==================== CTA SECTION ==================== -->
-    <!--
-      ✦ IMPROVEMENT 4: headline already matches spec ("Ready to stop missing patient calls?")
-        Updated subtext to sharper, demo-specific copy. Added .cta-demo-detail paragraph.
-    -->
     <section class="cta-section">
       <div class="container">
         <div class="cta-content">
@@ -868,7 +987,7 @@
           <ul class="footer-links">
             <li><a href="mailto:founder@voxcare.online">Contact Sales</a></li>
             <li><a href="https://wa.me/917995854994" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
             <li><a href="/terms">Terms of Service</a></li>
             <li><a href="/baa">Request BAA</a></li>
           </ul>
@@ -947,9 +1066,27 @@
   <div class="demo-badge">
     <button data-modal-trigger>See a Live Call Demo</button>
   </div>
-  
+
+  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+  <div id="wa-float" class="wa-float" role="complementary" aria-label="WhatsApp booking shortcut">
+    <span class="wa-float-label" aria-hidden="true">Chat on WhatsApp</span>
+    <a
+      href="https://wa.me/918712531028?text=Hi%20I%20want%20to%20book%20an%20appointment"
+      class="wa-float-btn voxcare-whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Open WhatsApp to book an appointment with VoxCare"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
+  <!-- ==================== END FLOATING WHATSAPP BUTTON ==================== -->
+
   <!-- Scripts -->
   <script src="./js/main.js"></script>
   <script src="./js/animations.js"></script>
+  <script src="./js/whatsapp.js"></script>
 </body>
 </html>
